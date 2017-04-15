@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `backend` mod in crate `smithay`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, backend">
+
+    <title>smithay::backend - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>smithay</a></p><script>window.sidebarCurrent = {name: 'backend', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>smithay</a>::<wbr><a class='mod' href=''>backend</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/smithay/backend/mod.rs.html#1-34' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Backend (rendering/input) creation helpers</p>
+
+<p>Collection of common traits and implementation about
+rendering onto various targets and receiving input
+from various sources.</p>
+
+<p>Supported graphics backends:</p>
+
+<ul>
+<li>glutin (headless/windowed)</li>
+</ul>
+
+<p>Supported input backends:</p>
+
+<ul>
+<li>glutin (windowed)</li>
+</ul>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use glium::*;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='glutin/index.html'
+                                  title='smithay::backend::glutin'>glutin</a></td>
+                           <td class='docblock-short'>
+                                <p>Implementation of backend traits for types provided by <code>glutin</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='graphics/index.html'
+                                  title='smithay::backend::graphics'>graphics</a></td>
+                           <td class='docblock-short'>
+                                <p>Common traits for various ways to renderer on a given graphics backend.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='input/index.html'
+                                  title='smithay::backend::input'>input</a></td>
+                           <td class='docblock-short'>
+                                <p>Common traits for input backends to receive input from.</p>
+                           </td>
+                       </tr></table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.assert_no_gl_error.html'
+                                  title='smithay::backend::assert_no_gl_error'>assert_no_gl_error</a></td>
+                           <td class='docblock-short'>
+                                <p>Calls the <code>assert_no_error</code> method on a <code>glium::Display</code> instance
+with file and line number information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.implement_buffer_content.html'
+                                  title='smithay::backend::implement_buffer_content'>implement_buffer_content</a></td>
+                           <td class='docblock-short'>
+                                <p>Implements the <code>glium::buffer::Content</code> trait for the given type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.implement_uniform_block.html'
+                                  title='smithay::backend::implement_uniform_block'>implement_uniform_block</a></td>
+                           <td class='docblock-short'>
+                                <p>Implements the <code>glium::uniforms::UniformBlock</code> trait for the given type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.implement_vertex.html'
+                                  title='smithay::backend::implement_vertex'>implement_vertex</a></td>
+                           <td class='docblock-short'>
+                                <p>Implements the <code>glium::vertex::Vertex</code> trait for the given type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.program.html'
+                                  title='smithay::backend::program'>program</a></td>
+                           <td class='docblock-short'>
+                                <p>Builds a program depending on the GLSL version supported by the backend.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.uniform.html'
+                                  title='smithay::backend::uniform'>uniform</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns an implementation-defined type which implements the <code>Uniform</code> trait.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "smithay";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
