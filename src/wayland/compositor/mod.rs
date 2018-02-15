@@ -246,6 +246,8 @@ pub struct CompositorToken<U, R, ID> {
     _idata: ::std::marker::PhantomData<*mut ID>,
 }
 
+unsafe impl<U, R, ID> Send for CompositorToken<U, R, ID> {}
+
 // we implement them manually because #[derive(..)] would require
 // U: Clone and R: Clone
 impl<U, R, ID> Copy for CompositorToken<U, R, ID> {}
